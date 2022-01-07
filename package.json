@@ -21,6 +21,9 @@
     "tsparticles": "^1.37.6",
     "web-vitals": "^1.1.2"
   },
+  "engines": {
+    "node": "16.13.0"
+  },
   "scripts": {
     "start": "serve -s build",
     "build": "react-scripts build",
