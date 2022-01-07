@@ -76,19 +76,19 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('http://localhost:3000/imageURL', {
+    fetch('https://fast-beyond-04962.herokuapp.com/imageURL', {
             method: 'post',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              id: this.state.input
+              input: this.state.input
             })
           })
           .then(response => response.json())
       .then((response) => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://fast-beyond-04962.herokuapp.com/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json'
